@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.fdu.ivos.dict.mapper.DictMapper">
+    <select id="selectDict" resultType="edu.fdu.ivos.dict.pojo.vo.DictVO">
+        SELECT id,name,code,remark,create_time
+        FROM dict
+        <where>
+            <if test="id!=null">
+                id=#{id}
+            </if>
+            <if test="name!=null and name !=''">
+                AND name LIKE CONCAT('%',#{name},'%')
+            </if>
+            <if test="code!=null and code !=''">
+                AND code LIKE CONCAT('%',#{code},'%')
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+
+    <select id="selectDictByCode" resultType="edu.fdu.ivos.dict.pojo.vo.DictVO">
+        SELECT id,name,code,remark,create_time
+        FROM dict
+        <where>
+            <if test="code!=null and code !=''">
+                AND code LIKE CONCAT('%',#{code},'%')
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+
+
+    <insert id="insert">
+        INSERT INTO dict(name,code,remark,create_time)
+        VALUES(#{name},#{code},#{remark},#{createTime})
+    </insert>
+
+    <update id="update">
+        UPDATE dict
+        <set>
+            <if test="name!=null and name !=''">
+                name=#{name},
+            </if>
+            <if test="code!=null and code !=''">
+                code=#{code},
+            </if>
+            <if test="remark!=null and remark !=''">
+                remark=#{remark},
+            </if>
+            <if test="updateTime!=null">
+                update_time=#{updateTime}
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM dict WHERE id=#{id}
+    </delete>
+</mapper>
