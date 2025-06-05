@@ -2,7 +2,7 @@
 
 A full-stack project based on Vue 3 and Spring Boot, designed to manage users, vehicles, geofencing, alerts, and dashboard data in a smart fleet environment. This is a personal project for learning purposes.
 
-### 🚀 Frontend
+### Frontend
 
 - **HTML5**: text tags, path management, semantic structure, forms, tables, lists, images, videos, hyperlinks
 - **CSS3**: import methods, selectors, specificity, color units, display models, box model, float and positioning, transitions, animations, shadows, center layout
@@ -44,12 +44,12 @@ root
 ```
 ---
 
-## 📝 Setup (Optional)
+## Setup 
 
 > Start backend first (ensure MySQL is configured), then run frontend using `npm run serve`.
 
 ---
 
-## 📬 Contact
+## Contact
 
 If you have any questions or concerns about the content, feel free to reach out via GitHub Issues.
