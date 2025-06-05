@@ -1,6 +1,6 @@
 # Intelligent Vehicle Operations Management System
 
-A full-stack project based on Vue 3 and Spring Boot, designed to manage users, vehicles, geofencing, alerts, and dashboard data in a smart fleet environment. This is a personal project for learning purposes.
+A full-stack project based on Vue 3 and Spring Boot, designed to manage users, vehicles, geofencing, alerts, and dashboard data in a smart fleet environment. This is a personal learning project and is not intended for commercial use.
 
 ### Frontend
 
