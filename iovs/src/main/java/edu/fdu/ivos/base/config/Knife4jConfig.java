@@ -24,7 +24,7 @@ public class Knife4jConfig {
                 // select(): API document selector for choosing which APIs to include
                 .select()
                 // apis(): Specify which package's APIs to include in the documentation
-                .apis(RequestHandlerSelectors.basePackage("cn.tedu.ivos"))
+                .apis(RequestHandlerSelectors.basePackage("edu.fdu.ivos"))
                 // paths(): Specify which URL patterns to include. PathSelectors.any() includes all APIs.
                 .paths(PathSelectors.any())
                 .build();
